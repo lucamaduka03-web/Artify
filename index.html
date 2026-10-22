@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f7f4ed">
+    <meta name="description" content="Discover original art and meet the artists behind it on Artify.">
+    <title>Artify — Art for the way you live</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar" aria-label="Main navigation">
+        <a class="brand" href="#" data-view="home" aria-label="Artify home">
+          <span class="brand-mark"><span></span><span></span><span></span></span>
+          <span>artify</span>
+        </a>
+        <div class="side-label">DISCOVER</div>
+        <nav class="side-nav">
+          <button class="nav-item active" data-view="home"><span class="nav-icon">⌂</span>Home</button>
+          <button class="nav-item" data-view="explore"><span class="nav-icon">⌕</span>Explore</button>
+          <button class="nav-item" data-view="live"><span class="nav-icon live-icon">◉</span>Live sessions <span class="live-dot"></span></button>
+        </nav>
+        <div class="side-label collection-label">YOUR SPACE</div>
+        <nav class="side-nav">
+          <button class="nav-item" data-view="saved"><span class="nav-icon">♡</span>Saved artwork</button>
+          <button class="nav-item" data-view="profile"><span class="nav-icon">◉</span>My profile</button>
+        </nav>
+        <div class="sidebar-bottom">
+          <div class="artist-prompt">
+            <span class="prompt-spark">✳</span>
+            <strong>Your art belongs here.</strong>
+            <p>Share what you make with people who love it.</p>
+            <button class="button button-light button-small" data-view="create">Start creating <span>↗</span></button>
+          </div>
+          <button class="account-mini" data-view="profile">
+            <span class="avatar avatar-me">E</span>
+            <span><strong>Emmanuel</strong><small>Collector</small></span>
+            <span class="more">···</span>
+          </button>
+        </div>
+      </aside>
+
+      <main class="main-area">
+        <header class="topbar">
+          <div class="mobile-brand brand"><span class="brand-mark"><span></span><span></span><span></span></span><span>artify</span></div>
+          <div class="breadcrumb"><span>Discover</span><span class="crumb-slash">/</span><strong id="crumb-current">Home</strong></div>
+          <div class="top-actions">
+            <label class="top-search"><span>⌕</span><input id="global-search" type="search" placeholder="Search artists, artwork..." aria-label="Search artists and artwork"><kbd>⌘ K</kbd></label>
+            <button class="icon-button notification-button" aria-label="Notifications" data-view="notifications">♧<i></i></button>
+            <button class="avatar avatar-me top-avatar" aria-label="My profile" data-view="profile">E</button>
+          </div>
+        </header>
+
+        <div id="view-container" class="view-container"></div>
+      </main>
+    </div>
+
+    <nav class="mobile-nav" aria-label="Mobile navigation">
+      <button class="active" data-view="home"><span>⌂</span>Home</button>
+      <button data-view="explore"><span>⌕</span>Explore</button>
+      <button class="mobile-create" data-view="create" aria-label="Create"><span>+</span></button>
+      <button data-view="live"><span>◉</span>Live</button>
+      <button data-view="profile"><span>◉</span>Profile</button>
+    </nav>
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+    <div id="modal-root"></div>
+    <script src="app.js"></script>
+  </body>
+</html>
